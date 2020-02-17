@@ -23,16 +23,16 @@
                         <input class="form__input" type="text" name="name" pattern="(^[А-ЯЁ])[а-яё]*-?[А-ЯЁ]?[а-яё]*" minlength="2" maxlength="20" placeholder="Имя" required />
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="email" name="name" pattern="[\w-]+@\w+\.\w+" placeholder="E-Mail" />
+                        <input class="form__input" type="email" name="name" pattern="[\w-]+@\w+\.\w+" placeholder="E-Mail" required/>
                         <span class="form__error">e-mail в формате: sega@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="tel" name="name" placeholder="Телефон" pattern="\+?\d[\s(]?\d{3}[)-]?\s?\d{3}-?\d{2}-?\d{2}" minlength="" maxlength="" />
+                        <input class="form__input" type="tel" name="name" placeholder="Телефон" pattern="\+?\d[\s(]?(\d\s?){3}[)-]?\s?(\d\s?){3}-?(\d\s?){2}-?(\d\s?){2}" minlength="" maxlength="" required/>
                         <span class="form__error">телефон в формате: +7 (123) 456-78-90</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="url" name="name" pattern="^(https?://)(www\.)?(([0-255]\.[0-255]\.[0-255]\.[0-255])|([a-zа-яё]*\.[a-zа-яё]*))(:\d{2,5})?(\/\d[a-zA-Z])+" placeholder="Ваш сайт" />
-                        <span class="form__error">URL в формате: http://mysite.ru</span>
+                        <input class="form__input" type="url" name="name" pattern="^(https?:\/\/)(www\.)?((([01]?\d\d?|2[0-4]\d|25[0-5])\.){3}([01]?\d\d?|2[0-4]\d|25[0-5])|([a-zа-яё]*\.[a-zа-яё]*))(:\d{2,5})?((\/\d?[\w#]*)+)?" placeholder="Ваш сайт" required/>
+                        <span class="form__error">URL в формате: http(s)://mysite.ru</span>
                     </div>
                     <button class="form__button" type="submit">Отправить</button>
                 </fieldset>
